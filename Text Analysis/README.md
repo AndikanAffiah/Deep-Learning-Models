@@ -8,3 +8,5 @@ All the models here use Word Embeddings. One can input their own embeddings, lik
 * `gru_double`: Two bi-GRU layers followed by poolings (avg and max).
 * `lstm`: An LSTM layer.
 * `lstm_cnn`: An LSTM layer followed by a Convolutional layer and a layer of poolings (avg and max).
+
+*The dataset comes from [here](https://www.kaggle.com/crowdflower/first-gop-debate-twitter-sentiment).*

@@ -1,6 +1,6 @@
 ### Text Analysis
 
-All the models here use Word Embeddings. One can input their own embeddings, like FastText/GloVe/Word2Vect/etc. After the embeddings layer there is a `SpatialDroupout1D`/`Dropout` layer. Below I note the main model characteristics after the dropout layer:
+All the models here use Word Embeddings. One can input their own embeddings, like FastText/GloVe/Word2Vec/etc. After the embeddings layer there is a `SpatialDroupout1D`/`Dropout` layer. Below I note the main model characteristics after the dropout layer:
 
 * `cnn`: A `Conv1D` layer.
 * `gru`: A bidirectional GRU layer with poolings (average and max).

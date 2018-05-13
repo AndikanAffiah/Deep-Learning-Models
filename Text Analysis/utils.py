@@ -7,9 +7,10 @@ from keras.preprocessing.sequence import pad_sequences
 
 def format_data(data, max_features, maxlen):
     data = data[data.sentiment != "Neutral"]
+    data = data.sample(frac=1).reset_index(drop=True)
     data['text'] = data['text'].apply(lambda x: x.lower())
 
-    Y = to_numerical(data['sentiment'].values) # 0: Negative; 1: Neutral; 2: Positive
+    Y = to_numerical(data['sentiment'].values) # 0: Negative; 1: Positive
     X = data['text']
 
     remove_rt_url(X)

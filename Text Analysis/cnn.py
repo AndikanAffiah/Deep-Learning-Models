@@ -33,9 +33,9 @@ x = Embedding(max_features, 150)(inp)
 x = SpatialDropout1D(0.25)(x)
 x = Conv1D(filters=32, kernel_size=3, padding='same', activation='relu')(x)
 x = MaxPooling1D(pool_size=2)(x)
+x = Conv1D(filters=16, kernel_size=5, padding='same', activation='relu')(x)
+x = MaxPooling1D(pool_size=4)(x)
 x = Flatten()(x)
-
-x = Dense(50, activation='relu')(x)
 
 # Output layer
 output = Dense(1, activation='sigmoid')(x)
